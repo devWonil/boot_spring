@@ -34,6 +34,6 @@ public class ApiController {
 	@PutMapping("/put")
 	public ResponseEntity<User> put(@RequestBody User user) {
 		// ResponseEntity를 통해서 status, header 등을 설정할 수 있다.
-		return ResponseEntity.status(HttpStatus.OK).body(user);
+		return ResponseEntity.status(HttpStatus.ACCEPTED).body(user);
 	}
 }

@@ -12,7 +12,7 @@ public class APIController {
 	// URL : 자원 요청하는 주소 체계방식
 	// URI : 식별자 방식
 
-	// http://localhost:9090/api/get/hello
+	// http://localhost:9091/api/get/hello
 	@GetMapping("/hello")
 	public String getHello() {
 		return "sayhello";
@@ -21,7 +21,7 @@ public class APIController {
 	// path-variable 방식
 
 	// get --> URI 방식 사용 (데이터를 담아서 요청) // 처리하고 // 응답가능
-	// http://localhost:9090/api/get/path-variable/[xxx]
+	// http://localhost:9091/api/get/path-variable/[xxx]
 	@GetMapping(path = "/path-variable/{name}")
 	public String queryParam(@PathVariable(name = "name") String name) {
 
@@ -29,7 +29,7 @@ public class APIController {
 		return "[[" + name + "]]";
 	}
 
-	// http://localhost:9090/api/get/path-variable/[xxx]
+	// http://localhost:9091/api/get/path-variable/[xxx]
 
 	@GetMapping(path = "/path-variable/{name}/{age}")
 	public String queryParam2(@PathVariable(name = "name") String name, @PathVariable(name = "age") int age) {
@@ -37,7 +37,7 @@ public class APIController {
 		System.out.println("name : " + name);
 		System.out.println("age : " + age);
 
-		return "name : " + name + "age : " + age;
+		return "name : " + name + " age : " + age;
 
 	}
 	
